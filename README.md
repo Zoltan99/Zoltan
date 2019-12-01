@@ -18,8 +18,8 @@ The script created all the important files.
 6. the program ask the video files absolte path (/home/z-home/Skill-Share-Crawler---DL-master/videos/Blender 28 complete course master all the basics of Blender/)
 hit enter
 
-7. than ask the destination folder absolute path choose a writeable folder on your pc (/media/z-home/hdd1/video/large_course/)
-hit enter, the program download all files one by one and rename it with ordinal number.
+7. than ask the destination folder absolute path, choose a writeable folder on your pc (/media/z-home/hdd1/video/large_course/)
+hit enter, the program download all files one by one and rename it with ordinal number too.
 
 That's it.
 
