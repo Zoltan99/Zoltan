@@ -15,7 +15,7 @@ The script created all the important files.
 
 5. start with python3 letolto.py (if you have python3 not instaled, install it)
 
-6.the program ask first the video files absolte path (/home/z-home/Skill-Share-Crawler---DL-master/videos/Blender 28 complete course master all the basics of Blender/)
+6.the program ask the video files absolte path (/home/z-home/Skill-Share-Crawler---DL-master/videos/Blender 28 complete course master all the basics of Blender/)
 hit enter
 
 7.than ask the destination folder absolute path choose a writeable folder on your pc (/media/z-home/hdd1/video/large_course/)
