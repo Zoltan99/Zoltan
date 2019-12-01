@@ -22,4 +22,5 @@ hit enter
 hit enter, the program download all files one by one and rename it with ordinal number.
 
 Thats it.
+Tested on Ubuntu 18.04.
 
