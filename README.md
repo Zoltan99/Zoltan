@@ -21,6 +21,7 @@ hit enter
 7. than ask the destination folder absolute path choose a writeable folder on your pc (/media/z-home/hdd1/video/large_course/)
 hit enter, the program download all files one by one and rename it with ordinal number.
 
-Thats it.
+That's it.
+
 Tested on Ubuntu 18.04.
 
