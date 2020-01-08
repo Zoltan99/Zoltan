@@ -15,10 +15,42 @@ def reporthook(blocknum, blocksize, totalsize):
     else: # total size is unknown
         sys.stderr.write("read %d\n" % (readsofar,))
 
+def letoltes(cim,sorszam,src,konyvtar_video):
+	cim=cim.replace("  ", " ")
+	cim=cim.replace(" ", "_")
+	cim=cim.replace("/", "")
+	sorszam=str(sorszam)
+	sorszamhossz=len(str(sorszam))
+	if sorszamhossz==1:
+		sorszam="00"+sorszam
+	elif sorszamhossz==2:
+		sorszam="0"+sorszam
+	elif sorszamhossz==3:
+		sorszam=sorszam
+	hely=konyvtar_video+sorszam+"-"+cim+".mp4"
+	print(sorszam+"-"+cim)
+	urlretrieve(src, hely, reporthook)	
+	print("ok")
 
+
+
+#konyvtar ="/home/z-home/Skill-Share-Crawler---DL-master/videos/Python Masterclass Learn Python 3 Programming Fast/"
 konyvtar = input("Enter the videofiles absolute path: ")
-
+#konyvtar_video = "/media/z-home/CE4653084652F0A7/videok/Blender 28 complete course master all the basics of Blender/"
 konyvtar_video = input("Enter the destination folder absolute path: ")
+
+downloaded_list=os.listdir(konyvtar_video)
+
+downloaded_videos={}
+
+for x in downloaded_list:
+	if os.path.isfile(konyvtar_video+"/"+x):
+		fileinfo=os.stat(konyvtar_video+"/"+x)
+		filesize=fileinfo.st_size
+		cim=x.replace("_", " ")
+		cim=cim[4:-4]
+		print ("Downloaded: "+cim+"-"+str(filesize)+" byte")
+		downloaded_videos[cim] = filesize
 
 
 listavideo=os.listdir(konyvtar)
@@ -37,21 +69,15 @@ for i in listavideo:
 		adatok=json.loads(f.read())
 		cim=adatok["name"]
 		src=adatok["sources"][6]["src"]
-		cim=cim.replace("  ", " ")
-		cim=cim.replace(" ", "_")
+		size=adatok["sources"][6]["size"]
 		f.close()
-		sorszam=str(sorszam)
-		sorszamhossz=len(str(sorszam))
-		if sorszamhossz==1:
-			sorszam="00"+sorszam
-		elif sorszamhossz==2:
-			sorszam="0"+sorszam
-		elif sorszamhossz==3:
-			sorszam=sorszam
-		hely=konyvtar_video+sorszam+"-"+cim+".mp4"
-		print(sorszam+"-"+cim)
-		urlretrieve(src, hely, reporthook)	
-		print("ok")
+		if cim in downloaded_videos:
+			file_meret=downloaded_videos[cim]
+			if file_meret != size:
+				letoltes(cim, sorszam, src, konyvtar_video)
+				
+		else:
+			letoltes(cim, sorszam, src, konyvtar_video)
+			
 
 print ("download complete!")
-		
