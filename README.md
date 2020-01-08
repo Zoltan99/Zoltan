@@ -3,7 +3,7 @@ I have written a hardcoded python program, to download the large courses videofi
 
 Important! The code written without error handling.
 
--Updated: the program checks the downloaded video files in the folder and wont download it again.
+**Updated: the program checks the downloaded video files in the folder and wont download it again.**
 
 How to use it:
 
