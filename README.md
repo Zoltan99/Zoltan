@@ -20,7 +20,7 @@ The script created all the important files.
 
 5. start on linux with: **python3 letolto.py** (if you have python3 not instaled, install it), on windows: **python letolto.py**
 
-6. the program ask the video files absolte path, paste the Skill-Share-Crawler created folder path, like this:(/home/z-home/Skill-Share-Crawler---DL-master/videos/Blender 28 complete course master all the basics of Blender/)
+6. the program ask the video files absolute path, paste the Skill-Share-Crawler created folder path, like this:(/home/z-home/Skill-Share-Crawler---DL-master/videos/Blender 28 complete course master all the basics of Blender/)
 hit enter
 
 7. than ask the destination folder absolute path, choose a writeable folder on your pc, paste the path, like this: (/media/z-home/hdd1/video/large_course/)
