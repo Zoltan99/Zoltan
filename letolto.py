@@ -34,9 +34,9 @@ def letoltes(cim,sorszam,src,konyvtar_video):
 
 
 
-#konyvtar ="/home/z-home/Skill-Share-Crawler---DL-master/videos/Python Masterclass Learn Python 3 Programming Fast/"
+
 konyvtar = input("Enter the videofiles absolute path: ")
-#konyvtar_video = "/media/z-home/CE4653084652F0A7/videok/Blender 28 complete course master all the basics of Blender/"
+
 konyvtar_video = input("Enter the destination folder absolute path: ")
 
 downloaded_list=os.listdir(konyvtar_video)
