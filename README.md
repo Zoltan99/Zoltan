@@ -18,7 +18,7 @@ The script created all the important files.
 
 4. navigate in terminal (on win commandline) to letolto.py folder.
 
-5. start with: python3 letolto.py (if you have python3 not instaled, install it), on windows: python letolto.py.
+5. start on linux with: **python3 letolto.py** (if you have python3 not instaled, install it), on windows: **python letolto.py**
 
 6. the program ask the video files absolte path, paste the Skill-Share-Crawler created folder path, like this:(/home/z-home/Skill-Share-Crawler---DL-master/videos/Blender 28 complete course master all the basics of Blender/)
 hit enter
